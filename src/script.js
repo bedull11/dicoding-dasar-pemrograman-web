@@ -1,5 +1,18 @@
 feather.replace();
 
+// Active Menu
+// const navLink = document.querySelector('.nav-link');
+// const windowPathname = window.location.pathname;
+
+// navLink.forEach(navLink => {
+//     const navLinkPathname = new URL (navLink.href).pathname;
+
+//     if ((windowPathname === navLinkPathname) || (windowPathname === '/index.html' && navLinkPathname === '/')) {
+//         navLink.classList.add('active');
+//     }
+// })
+
+
 // Menu toggle
 const hamburger = document.querySelector("#hamburger");
 

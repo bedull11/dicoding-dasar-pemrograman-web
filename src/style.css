@@ -19,6 +19,7 @@
 body {
   background-color: #fefefe;
   overflow-x: hidden;
+  /* min-height: 5000px; */
 }
 
 .container {
@@ -78,20 +79,33 @@ body {
 }
 
 /* Nav */
-nav {
-  display: flex;
-  /* background-color: var(--orange); */
-  background-color: #fefefe;
-  /* filter: blur(16px); */
-  justify-content: space-around;
-  /* padding: 20px 0; */
-  height: 88px;
-  align-items: center;
-  box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1);
-  margin: 0 10px;
+
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  /* box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1); */
+  background-color: rgb(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
-nav .logo {
+nav {
+  display: flex;
+  justify-content: space-between;
+  height: 88px;
+  align-items: center;
+  margin: 0 72px;
+}
+
+/* nav .logo {
+  font-size: 32px;
+  color: var(--neutral);
+  font-weight: 600;
+} */
+
+nav .logo a{
   font-size: 32px;
   color: var(--neutral);
   font-weight: 600;
@@ -215,9 +229,25 @@ nav ul li a:hover::after {
     grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
   }
 
-  nav .logo {
-    margin-right: 96px;
+  footer .links a{
+    font-size: 14px;
+    margin: 8px;
   }
+
+  nav{
+    margin: 0 16px;
+  }
+  
+  nav .logo {
+    margin-left: 12px;
+  }
+
+  nav .logo a{
+    font-size: 24px;
+    color: var(--neutral);
+    font-weight: 600;
+  }
+  
   .menu-toggle {
     display: flex;
     margin: 40px;
@@ -243,7 +273,7 @@ nav ul li a:hover::after {
   }
 
   .container {
-    padding: 0 16px;
+    padding: 32px 16px;
   }
   .hero {
     margin: 2px 1000px;
@@ -531,16 +561,62 @@ nav ul li a:hover::after {
 }
 
 /* Footer */
+footer{
+  background-color: #333;
+  text-align: center;
+  margin: 2rem;
+  border-radius: 24px;
+}
 
+footer .social-media{
+  padding: 1rem;
+}
+
+footer .social-media a{
+  color: #fefefe;
+  margin: 1rem;
+}
+
+footer .social-media a:hover{
+  /* padding: 1rem;
+  border-radius: 12px;
+  background-color: #ff6000;
+  align-self: center;
+  color: #ff6000;
+  margin: 1rem; */
+}
+
+footer .links {
+}
+
+footer .links a{
+  font-size: 14px;
+  color: #fefefe;
+  margin: 8px;
+  font-weight: 400;
+}
+
+footer .links a:hover{
+  color: #ff6000;
+}
+
+footer .credit{
+  padding: 24px;
+}
+
+footer .credit p{
+  font-size: 14px;
+  color: #fefefe;
+}
 
 /* back to top */
 .back-top {
   position: fixed;
   bottom: 2rem;
   right: 2rem;
-  background-color: rgba(44, 44, 44, 0.3);
   border-radius: 12px;
   padding: 10px;
+  background-color: rgba(44, 44, 44, 0.3);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   transition: all 400ms ease;
